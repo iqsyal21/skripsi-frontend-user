@@ -1,0 +1,233 @@
+body {
+  background-color: #eff5f5;
+}
+
+.navbar-bg {
+  background-color: #b9e0ff;
+}
+
+Nav a:hover {
+  border-radius: 20px;
+  outline: 2px solid black;
+}
+
+.container-chart {
+  height: 200px;
+  width: 100%;
+  background-color: #8d9eff;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-artikel,
+.container-agenda {
+  width: 100%;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* style main box 1 dan main box 3 */
+.mainbox-1,
+.mainbox-3 {
+  background-color: #d6e4e5;
+  padding: 3em 0;
+}
+.mainbox-1 > div,
+.mainbox-3 > div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+.mainbox-1_content,
+.mainbox-3_content {
+  margin-top: 2em;
+  text-align: center;
+  font-size: large;
+}
+.mainbox-1_content button,
+.mainbox-3_content button {
+  width: 40%;
+  border-radius: 20px;
+}
+.mainbox-1_image,
+.mainbox-3_image {
+  display: flex;
+  justify-content: center;
+}
+.mainbox-1_image img {
+  width: 50%;
+  padding: 1em;
+}
+.mainbox-3_image img {
+  width: 80%;
+  padding: 1em;
+}
+
+/* style main box 2 dan box 4*/
+.mainbox-2,
+.mainbox-4 {
+  padding: 3em 0;
+}
+.mainbox-2 > div,
+.mainbox-4 > div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+.mainbox-2_content {
+  margin-top: 3em;
+  text-align: center;
+  font-size: large;
+}
+.mainbox-4_content {
+  margin-top: 1.5em;
+  text-align: center;
+  font-size: large;
+}
+.mainbox-2_content button {
+  background-color: #d6e4e5;
+  width: 40%;
+  border-radius: 20px;
+}
+.mainbox-4_content button {
+  width: 30%;
+  border-radius: 20px;
+  margin: 1em;
+}
+.mainbox-2_image,
+.mainbox-4_image {
+  display: flex;
+  justify-content: center;
+}
+.mainbox-2_image img {
+  width: 80%;
+  padding: 1em;
+}
+.mainbox-4_image img {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+/* mainbox1-4 img animation */
+.mainbox-1_image img,
+.mainbox-2_image img,
+.mainbox-3_image img,
+.mainbox-4_image img {
+  position: relative;
+  animation-name: boximage;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes boximage {
+  0% {
+    left: 0px;
+    top: -20px;
+  }
+  50% {
+    left: 0px;
+    top: 20px;
+  }
+  100% {
+    left: 0px;
+    top: -20px;
+  }
+}
+
+/* css transition */
+.fade-enter .container-main,
+.fade-enter .container-artikel,
+.fade-enter .container-agenda {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-enter-active .container-main,
+.fade-enter-active .container-artikel,
+.fade-enter-active .container-agenda {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit .container-main,
+.fade-exit .container-artikel,
+.fade-exit .container-agenda {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit-active .container-main,
+.fade-exit-active .container-artikel,
+.fade-exit-active .container-agenda {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-enter-active .container-main,
+.fade-exit-active .container-main,
+.fade-enter-active .container-artikel,
+.fade-exit-active .container-artikel,
+.fade-enter-active .container-agenda,
+.fade-exit-active .container-agenda {
+  transition: opacity 500ms, transform 500ms;
+}
+
+.back-icon {
+  color: white;
+  margin-top: -0.5em;
+}
+
+.back-icon_text {
+  color: white;
+  font-size: x-large;
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+.container-footer {
+  background-color: #497174;
+  color: white;
+  margin-bottom: -1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-artikel,
+  .container-agenda {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    flex-direction: column;
+  }
+  /* style main box 1 */
+  .mainbox-1 > div,
+  .mainbox-3 > div {
+    flex-direction: column-reverse;
+    padding: 2em;
+  }
+  .mainbox-1_content,
+  .mainbox-3_content {
+    margin-top: 0;
+  }
+  .mainbox-1_image,
+  .mainbox-3_image {
+    padding: 0;
+  }
+
+  /* style main box 2 */
+  .mainbox-2 > div,
+  .mainbox-4 > div {
+    flex-direction: column-reverse;
+    padding: 2em;
+  }
+  .mainbox-2_content,
+  .mainbox-4_content {
+    margin-top: 0;
+  }
+  .mainbox-2_image,
+  .mainbox-4_image {
+    margin-top: 1em;
+    padding: 0;
+  }
+  .mainbox-4_content button {
+    width: 40%;
+    margin: 0.5em;
+  }
+}

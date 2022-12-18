@@ -1,0 +1,229 @@
+.bg-container-akun {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1em 4em;
+  font-family: "arial", heletica, sans-serif;
+  font-size: 12px;
+  background: #2980b9
+    url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
+    repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-moz-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-ms-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-o-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+/* style verifikasi */
+.container-verify {
+  width: 30%;
+  margin: auto;
+  font-size: 1.2em;
+}
+
+.form-verifikasi input {
+  width: 90%;
+  height: 60px;
+  border: 1px solid gray;
+  border-radius: 30px;
+  letter-spacing: 1.2em;
+  font-size: 1.7em;
+  text-align: center;
+}
+
+/* style login dan register */
+.container-login,
+.container-register {
+  display: flex;
+  width: 100%;
+  height: 85%;
+  margin: auto;
+  font-size: 1.2em;
+}
+
+.container-register {
+  flex-direction: row-reverse;
+}
+
+.box-form-login,
+.box-form-register {
+  flex-basis: 50%;
+  padding: 4em;
+  background-color: #e7f6f2;
+}
+
+.box-form-login {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.box-form-register {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.box-form-login form button,
+.box-form-register form button {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.box-form-img-login,
+.box-form-img-register {
+  flex-basis: 50%;
+  background-color: #a5c9ca;
+}
+.box-form-img-login {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.box-form-img-register {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.img-box-flex {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  padding: 1em;
+}
+
+.box-form-login a,
+.box-form-register a {
+  text-decoration: none;
+}
+
+.box-form-login span,
+.box-form-register span,
+.container-verify span {
+  color: blue;
+}
+
+.box-form-login span:hover,
+.box-form-register span:hover,
+.container-verify span:hover {
+  cursor: pointer;
+}
+
+/* css transition */
+.fade-enter .container-login,
+.fade-enter .container-register {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-enter-active .container-login,
+.fade-enter-active .container-register {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit .container-login,
+.fade-exit .container-register {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit-active .container-login,
+.fade-exit-active .container-register {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-enter-active .container-login,
+.fade-exit-active .container-login,
+.fade-enter-active .container-register,
+.fade-exit-active .container-register {
+  transition: opacity 500ms, transform 500ms;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-login,
+  .container-register {
+    flex-direction: column-reverse;
+  }
+  .box-form-login,
+  .box-form-register {
+    padding: 2em;
+    background-color: #e7f6f2;
+  }
+  .box-form-login {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 20px;
+  }
+  .box-form-register {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+  }
+  .box-form-login form,
+  .box-form-register form {
+    margin-top: 0;
+  }
+  .box-form-img-login {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .box-form-img-register {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
+
+  .img-box-flex {
+    width: 100%;
+    padding: 2em;
+  }
+
+  /* style verifikasi */
+  .container-verify {
+    width: 80%;
+  }
+  .form-verifikasi input {
+    font-size: 1.2em;
+  }
+}
