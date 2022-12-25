@@ -12,6 +12,15 @@ import "aos/dist/aos.css";
 
 const Main = (props) => {
   const history = useHistory();
+  
+  const toAkun = () => {
+    const token = sessionStorage.getItem("token");
+    if (token !== (undefined || null)) {
+      alert("anda sudah login")
+    } else {
+      history.push("/akun")
+    }
+  }
 
   const toArtikel = () => {
     history.push("/#artikel");
@@ -45,7 +54,7 @@ const Main = (props) => {
               Daftarkan diri anda untuk mendapatkan vaksinasi di Puskesmas
               Cilebut
             </p>
-            <Button variant="light" onClick={() => history.push("/akun")}>Login / Buat Akun</Button>
+            <Button variant="light" onClick={() => toAkun()}>Login / Buat Akun</Button>
           </div>
           <div
             data-aos="zoom-in"
