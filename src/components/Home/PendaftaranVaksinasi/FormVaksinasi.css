@@ -1,0 +1,97 @@
+.bg-container-pendaftaran {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1em 4em;
+  font-family: "arial", heletica, sans-serif;
+  font-size: 12px;
+  background: #2980b9
+    url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
+    repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-moz-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-ms-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-o-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+.card-body-costume {
+  width: 90%;
+  margin: auto;
+}
+
+form div {
+  font-size: large;
+}
+
+.box-peringatan {
+  margin: 8em 0;
+  width: 100%;
+  font-size: large;
+  text-align: center;
+}
+
+.button-peringatan{
+  width: 30%;
+  margin: 1em auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-body-costume {
+    width: 100%;
+  }
+  
+  form div {
+    font-size: small;
+  }
+  .select-vaksin-text {
+    font-size: smaller;
+  }
+}

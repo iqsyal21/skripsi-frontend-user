@@ -3,26 +3,26 @@ body {
 }
 
 .navbar-bg {
-  background-color: #b9e0ff;
+  background-color: #CFF5E7;
 }
 
-Nav a:hover {
-  border-radius: 20px;
-  outline: 2px solid black;
+Nav a:hover, .active-nav{
+  font-weight: 400;
+  border-bottom: 2px solid black;
+  margin-bottom: -2px;
 }
 
-.container-chart {
-  height: 200px;
+.container-info {
   width: 100%;
   background-color: #8d9eff;
-  position: relative;
-  overflow: hidden;
+  text-align: center;
 }
 
+.container-card-counter,
 .container-artikel,
 .container-agenda {
   width: 100%;
-  margin-top: 2em;
+  padding: 2em 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -46,9 +46,14 @@ Nav a:hover {
   text-align: center;
   font-size: large;
 }
-.mainbox-1_content button,
+.mainbox-1_content button {
+  width: max-content;
+  padding: 0.5em 1.5em;
+  border-radius: 20px;
+}
 .mainbox-3_content button {
-  width: 40%;
+  width: max-content;
+  padding: 0.5em 1.5em;
   border-radius: 20px;
 }
 .mainbox-1_image,
@@ -88,12 +93,14 @@ Nav a:hover {
 }
 .mainbox-2_content button {
   background-color: #d6e4e5;
-  width: 40%;
+  width: max-content;
+  padding: 0.5em 1.5em;
   border-radius: 20px;
 }
 .mainbox-4_content button {
-  width: 30%;
+  width: max-content;
   border-radius: 20px;
+  padding: 0.5em 1.5em;
   margin: 1em;
 }
 .mainbox-2_image,
@@ -137,24 +144,28 @@ Nav a:hover {
 
 /* css transition */
 .fade-enter .container-main,
+.fade-enter .container-info,
 .fade-enter .container-artikel,
 .fade-enter .container-agenda {
   opacity: 0;
   transform: translateX(-100%);
 }
 .fade-enter-active .container-main,
+.fade-enter-active .container-info,
 .fade-enter-active .container-artikel,
 .fade-enter-active .container-agenda {
   opacity: 1;
   transform: translateX(0%);
 }
 .fade-exit .container-main,
+.fade-exit .container-info,
 .fade-exit .container-artikel,
 .fade-exit .container-agenda {
   opacity: 1;
   transform: translateX(0%);
 }
 .fade-exit-active .container-main,
+.fade-exit-active .container-info,
 .fade-exit-active .container-artikel,
 .fade-exit-active .container-agenda {
   opacity: 0;
@@ -162,6 +173,8 @@ Nav a:hover {
 }
 .fade-enter-active .container-main,
 .fade-exit-active .container-main,
+.fade-enter-active .container-info,
+.fade-exit-active .container-info,
 .fade-enter-active .container-artikel,
 .fade-exit-active .container-artikel,
 .fade-enter-active .container-agenda,
@@ -169,31 +182,55 @@ Nav a:hover {
   transition: opacity 500ms, transform 500ms;
 }
 
+.content-deskripsi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */ 
+  -webkit-box-orient: vertical;
+}
+
+.image-detail {
+  width: 50%;
+}
+
+.content-detail {
+  padding: 2em;
+}
+
+/* style pendaftaran vaksinasi */
 .back-icon {
-  color: white;
   margin-top: -0.5em;
 }
 
 .back-icon_text {
-  color: white;
   font-size: x-large;
   text-align: left;
   margin-left: 0.5em;
 }
 
+/* footer */
 .container-footer {
   background-color: #497174;
   color: white;
   margin-bottom: -1em;
 }
 
+.content-footer {
+  display: flex;
+}
+
+.content-footer_box-1, .content-footer_box-2 {
+  margin: 2em;
+}
+
 @media only screen and (max-width: 768px) {
+  .container-card-counter,
   .container-artikel,
   .container-agenda {
     display: flex;
     width: 80%;
     margin: auto;
-    padding: 0;
     flex-direction: column;
   }
   /* style main box 1 */
@@ -227,7 +264,18 @@ Nav a:hover {
     padding: 0;
   }
   .mainbox-4_content button {
-    width: 40%;
     margin: 0.5em;
+  }
+
+  .image-detail {
+    width: 100%;
+  }
+
+  /* style footer */
+  .content-footer {
+    flex-direction: column;
+  }
+  .content-footer_box-1, .content-footer_box-2 {
+    margin: 1em;
   }
 }

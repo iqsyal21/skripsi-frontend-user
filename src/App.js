@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Akun from './components/Akun/Akun';
 import Verifikasi from './components/Akun/Verifikasi';
 import Home from './components/Home/Home';
-import "./App.css";
-import PendaftaranVaksinasi from './components/Home/PendaftaranVaksinasi';
+import PendaftaranVaksinasi from './components/Home/PendaftaranVaksinasi/PendaftaranVaksinasi';
 
 const App = () => {
   return (

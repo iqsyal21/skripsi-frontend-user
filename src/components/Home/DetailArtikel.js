@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 
-const PendaftaranVaksinasi = () => {
+const DetailArtikel = (props) => {
   return (
     <div>
-      <Navbar bg="dark" variant="light" sticky="top" expand="lg">
-        <Container fluid>
+      <Navbar className="navbar-bg" sticky="top" expand="lg">
+        <Container>
           <Nav className="me-auto">
             <Nav.Link href="/">
               <svg
@@ -28,11 +30,8 @@ const PendaftaranVaksinasi = () => {
           </Nav>
         </Container>
       </Navbar>
-      <div>
-        <h1>halaman pendaftaran vaksinasi</h1>
-      </div>
     </div>
   );
 };
 
-export default PendaftaranVaksinasi;
+export default DetailArtikel;

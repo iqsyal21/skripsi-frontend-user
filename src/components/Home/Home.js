@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react';
-import "./style.css"
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import NavbarComp from "./NavbarComp";
 import Artikel from "./Artikel";
 import Agenda from "./Agenda";
 import Main from './Main';
+import Footer from "./Footer";
+import "./style.css"
 
 const Home = () => {
   // transisi komponen
@@ -16,7 +17,7 @@ const Home = () => {
 
   return (
     <div>
-      <NavbarComp ubahState={setState.bind(this)} />
+      <NavbarComp currentState={state} ubahState={setState.bind(this)} />
       <SwitchTransition>
       <CSSTransition
           key={state}
@@ -27,10 +28,11 @@ const Home = () => {
           classNames="fade"
         >
           <div ref={nodeRef}>
-              {state === 1 ? <Main /> : (state === 2 ? <Artikel /> : <Agenda />)}
+              {state === 1 ? <Main ubahState={setState.bind(this)} /> : (state === 2 ? <Artikel /> : <Agenda />)}
           </div>
         </CSSTransition>
       </SwitchTransition>
+      <Footer />
     </div>
   );
 };
