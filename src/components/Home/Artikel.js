@@ -9,6 +9,7 @@ import Image from "react-bootstrap/Image";
 import FullHeight from "react-full-height";
 
 // api https://data.covid19.go.id/public/api/update.json
+// api https://apicovid19indonesia-v2.vercel.app/api/indonesia
 const Artikel = () => {
   const history = useHistory();
 
@@ -64,8 +65,8 @@ const Artikel = () => {
             <h2>Info Kasus Covid-19 Indonesia</h2>
             <h4>
               update tanggal{" "}
-              {tanggalUpdate === (undefined || null)
-                ? "server error"
+              {tanggalUpdate.length <= 0
+                ? "(server error)"
                 : tanggalUpdate}
             </h4>
             <div className="container-card-counter">
@@ -73,8 +74,8 @@ const Artikel = () => {
                 <Card.Body>
                   {" "}
                   <h5>Jumlah Positif</h5>{" "}
-                  {dataCovid.positif === (undefined || null)
-                    ? "server error"
+                  {dataCovid.length <= 0
+                    ? "(server error)"
                     : dataCovid.positif}
                 </Card.Body>
               </Card>
@@ -82,8 +83,8 @@ const Artikel = () => {
                 <Card.Body>
                   {" "}
                   <h5>Jumlah Dirawat</h5>{" "}
-                  {dataCovid.dirawat === (undefined || null)
-                    ? "server error"
+                  {dataCovid.length <= 0
+                    ? "(server error)"
                     : dataCovid.dirawat}
                 </Card.Body>
               </Card>
@@ -91,8 +92,8 @@ const Artikel = () => {
                 <Card.Body>
                   {" "}
                   <h5>Jumlah Sembuh </h5>{" "}
-                  {dataCovid.sembuh === (undefined || null)
-                    ? "server error"
+                  {dataCovid.length <= 0
+                    ? "(server error)"
                     : dataCovid.sembuh}
                 </Card.Body>
               </Card>
@@ -100,8 +101,8 @@ const Artikel = () => {
                 <Card.Body>
                   {" "}
                   <h5>Jumlah Meninggal</h5>{" "}
-                  {dataCovid.meninggal === (undefined || null)
-                    ? "server error"
+                  {dataCovid.length <= 0
+                    ? "(server error)"
                     : dataCovid.meninggal}
                 </Card.Body>
               </Card>

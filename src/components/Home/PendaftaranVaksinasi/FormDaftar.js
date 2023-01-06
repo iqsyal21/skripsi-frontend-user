@@ -82,7 +82,7 @@ const FormDaftar = () => {
                     key={item.id_jadwal_vaksinasi}
                     value={item.id_jadwal_vaksinasi}
                   >
-                    {item.tanggal_vaksinasi.split("T")[0]} -{" "}
+                    {item.tanggal_vaksinasi.split("T")[0]} :{" "}
                     {item.stokvaksin.nama_jenis_vaksin} ({item.keterangan})
                     kuota{" "}
                     {item.stokvaksin.jumlah_stok -
