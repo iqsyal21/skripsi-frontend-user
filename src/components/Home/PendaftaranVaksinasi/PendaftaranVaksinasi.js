@@ -4,9 +4,14 @@ import axios from "axios";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import FormDaftar from "./FormDaftar";
-import Peringatan from "./Peringatan";
+import Card from "react-bootstrap/Card";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 import FullHeight from "react-full-height";
+import Peringatan from "./Peringatan";
+import FormDaftarVaksin1 from "./FormDaftarVaksin1";
+import FormDaftarVaksin2 from "./FormDaftarVaksin2";
+import FormDaftarVaksinBooster from "./FormDaftarVaksinBooster";
 import "./FormVaksinasi.css";
 
 const PendaftaranVaksinasi = () => {
@@ -68,7 +73,27 @@ const PendaftaranVaksinasi = () => {
           {token == undefined || statusToken == false ? (
             <Peringatan />
           ) : (
-            <FormDaftar />
+            <Container>
+              <br /> <br />
+              <Card>
+                <Card.Header as="h3">Form Pendaftaran Vaksinasi</Card.Header>
+                <Tabs
+                  defaultActiveKey="vaksin1"
+                  id="uncontrolled-tab-example"
+                  className="mb-3"
+                >
+                  <Tab eventKey="vaksin1" title="Daftar Vaksin 1">
+                    <FormDaftarVaksin1 />
+                  </Tab>
+                  <Tab eventKey="vaksin2" title="Daftar Vaksin 2">
+                    <FormDaftarVaksin2 />
+                  </Tab>
+                  <Tab eventKey="vaksinbooster" title="Daftar Vaksin Booster">
+                    <FormDaftarVaksinBooster />
+                  </Tab>
+                </Tabs>
+              </Card>
+            </Container>
           )}
         </FullHeight>
       </div>

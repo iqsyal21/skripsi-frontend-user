@@ -51,6 +51,8 @@ const Register = (props) => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
+                  pattern=".{8,}"
+                  title="panjang password minimal 8 karakter"
                   {...register("password", { required: true })}
                 />
               </Form.Group>
