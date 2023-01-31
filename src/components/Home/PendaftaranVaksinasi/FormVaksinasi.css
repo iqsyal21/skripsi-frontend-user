@@ -68,13 +68,13 @@
 }
 
 form div {
-  font-size: large;
+  font-size: medium;
 }
 
 .box-peringatan {
   margin: 8em 0;
   width: 100%;
-  font-size: large;
+  font-size: medium;
   text-align: center;
 }
 
