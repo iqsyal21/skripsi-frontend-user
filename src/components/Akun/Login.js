@@ -61,7 +61,7 @@ const Login = (props) => {
                 <span onClick={() => props.ubahState(false)}>buat akun</span>
               </p>
               <p>
-                <a href="/">kembali ke halaman utama</a>
+                <span onClick={() => history.push("/")}>kembali ke halaman utama</span>
               </p>
             </div>
           </div>

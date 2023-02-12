@@ -1,4 +1,6 @@
+/* eslint-disable eqeqeq */
 import React from "react";
+import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -6,6 +8,8 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../../assets/images/logo.png"
 
 const NavbarComp = (props) => {
+  const history = useHistory();
+
   const sessionToken = sessionStorage.getItem("token");
 
   const onLogout = () => {
@@ -54,10 +58,10 @@ const NavbarComp = (props) => {
             >
               Agenda
             </Nav.Link>
-            <Nav.Link href="/vaksinasi">Pendaftaran Vaksinasi</Nav.Link>
+            <Nav.Link onClick={() => history.push("/vaksinasi")}>Pendaftaran Vaksinasi</Nav.Link>
           </Nav>
           {sessionToken == undefined ? (
-            <Button variant="primary" href="/akun">
+            <Button variant="primary" onClick={() => history.push("/akun")}>
               Login
             </Button>
           ) : (

@@ -59,7 +59,7 @@ const Verifikasi = () => {
                     kode tidak ada ? <span onClick={getKode}>kirim ulang kode</span>
                   </p>
                   <p>
-                    <a href="/akun">kembali ke halaman login</a>
+                    <span onClick={() => history.push("/akun")}>kembali ke halaman login</span>
                   </p>
                 </div>
               </Card.Text>
