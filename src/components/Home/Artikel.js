@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -11,8 +10,6 @@ import FullHeight from "react-full-height";
 // api https://data.covid19.go.id/public/api/update.json
 // api https://apicovid19indonesia-v2.vercel.app/api/indonesia
 const Artikel = () => {
-  const history = useHistory();
-
   const url = "http://localhost:5000/";
 
   // get data update covid19 public api
