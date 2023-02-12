@@ -49,7 +49,7 @@ const PendaftaranVaksinasi = () => {
       <Navbar className="navbar-bg" sticky="top" expand="lg">
         <Container>
           <Nav className="me-auto">
-            <Nav.Link href="/">
+            <Nav.Link onClick={() => history.push("/")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"

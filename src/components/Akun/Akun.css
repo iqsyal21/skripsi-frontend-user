@@ -146,7 +146,7 @@
 .box-form-login span,
 .box-form-register span,
 .container-verify span {
-  color: blue;
+  color: rgb(93, 93, 253);
 }
 
 .box-form-login span:hover,
