@@ -42,7 +42,7 @@ const PendaftaranVaksinasi = () => {
           history.push("/akun");
           window.location.reload();
         });
-    }, 10000);
+    }, 50000);
   });
 
   return (
